@@ -1,23 +1,29 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class = "navbar-nav">
+    <li class = "nav-item">
+      <a [routerLink]="['/login']" routerLinkActive="active" class="nav-link" >login</a>
+  </li>
       <li class = "nav-item">
-          <a routerLink="accounts" routerLinkActive="active" class="nav-link" >Accounts List</a>
+          <a [routerLink]="['/accounts']" routerLinkActive="active" class="nav-link" >AccountList</a>
       </li>
       <li class = "nav-item">
-        <a routerLink="create-account" routerLinkActive="active" class="nav-link" >Add Customer Account</a>
-     </li>
-     <li class = "nav-item">
-      <a routerLink="transfer" routerLinkActive="active" class="nav-link" >Transfer Money</a>
-   </li>
-
-     <li class = "nav-item">
-      <a routerLink="deposit" routerLinkActive="active" class="nav-link" >Deposit Money</a>
-   </li>
-   <li class = "nav-item">
-    <a routerLink="withdraw" routerLinkActive="active" class="nav-link" >Withdraw Money</a>
- </li>
+        <a  [routerLink]="['/create-account']" routerLinkActive="active" class="nav-link" >Add customer</a>
+      </li>
+      <li class = "nav-item">
+        <a  [routerLink]="['/transfer']" routerLinkActive="active" class="nav-link" >Transfer Amount</a>
+      </li>
+      <li class = "nav-item">
+        <a  [routerLink]="['/deposit']" routerLinkActive="active" class="nav-link" >Deposit</a>
+      </li>
+      <li class = "nav-item">
+        <a  [routerLink]="['/withdraw']" routerLinkActive="active" class="nav-link" >Withdraw</a>
+      </li>
+      <li class = "nav-item">
+        <a   [routerLink]="['/logout']" routerLinkActive="active" class="nav-link" >logout</a>
+      </li>
   </ul>
 </nav>
+
 
 
 <div class="text-center">

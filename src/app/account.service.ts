@@ -14,6 +14,7 @@ export class AccountService {
 
   constructor(private httpClient: HttpClient) { }
   
+//return this.httpClient.get<Employee[]>(`${this.baseURL}`);
 
   getAccountList(): Observable<AccountDetails[]>{
     return this.httpClient.get<AccountDetails[]>(`${this.baseURL}`);
@@ -22,8 +23,10 @@ export class AccountService {
   createAccount(account: AccountDetails): Observable<Object>{
     return this.httpClient.post(`${this.baseURL}`, account);
   }
+
+  
   updateEmployee(accountId: number, account: AccountDetails): Observable<Object>{
-    return this.httpClient.put(`${this.baseURL}/${accountId}`, account);;
+    return this.httpClient.put(`${this.baseURL}/${accountId}`, account);
   }
   getAccountById(accountId: number): Observable<AccountDetails>{
     return this.httpClient.get<AccountDetails>(`${this.baseURL}/${accountId}`);
